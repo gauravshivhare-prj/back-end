@@ -1,7 +1,34 @@
-const express = require("express");  // this is import statement but in older way
+const express = require("express");
 
-const app = express(); // this create instance of server 
+const app = express();
 
-app.listen(3000);  // this start the server the no 3000 can be any number 
+app.listen(3000);
 
-// now to run the code in terminal run node and file name here (node app.js)
+
+/*
+=======================
+Day 1 – Backend Steps
+=======================
+
+Step 1: Import Express
+Ye import statement hai express ko use karne ke liye.
+Ye older way hai (CommonJS) jisme require() use hota hai.
+
+Step 2: Create Server Instance
+express() ko call karke hum server ka instance banate hain.
+Ye app pura backend server ko represent karta hai.
+
+Step 3: Start the Server
+app.listen(3000) server ko start karta hai.
+3000 ek port number hai, ye koi bhi number ho sakta hai.
+
+Step 4: Run the Server
+Server run karne ke liye terminal me command use hoti hai:
+node app.js
+
+Isse backend server start ho jata hai.
+
+=======================
+End of Day 1
+=======================
+*/
