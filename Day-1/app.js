@@ -1,6 +1,9 @@
 const express = require("express");
+// const http = require("http")
+
 
 const app = express();
+// const app = http.createserver((req,res)=>{    res.end("Hello from HTTP Server"); })
 
 app.listen(3000);
 
