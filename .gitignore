@@ -1,0 +1,7 @@
+# env files
+.env
+Day-8/.env
+
+# node modules (VERY IMPORTANT)
+node_modules/
+Day-8/node_modules/
