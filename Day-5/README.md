@@ -11,7 +11,7 @@ Is day me maine:
 
 ## Folder Structure
 
-Day-5/
+Day-5/ 
 ├── config/
 │   └── db.js
 ├── models/
@@ -40,7 +40,7 @@ req.body se JSON data read karne ke liye use hota hai.
 
 connectDB();
 
-MongoDB URL:mongodb://localhost:27017/save-data
+MongoDB URL:mongodb://localhost:27017/save-data.
 
 * localhost → local machine
 * 27017 → MongoDB default port
@@ -52,7 +52,7 @@ app.get("/", (req, res) => {
   res.send("okk milgya res");
 });
 
-Browser me open:http://localhost:3000/
+Browser me  open:http://localhost:3000/
 
 ### Step 8: Create POST API (/new-product)
 
