@@ -7,8 +7,6 @@ Is day me maine:
 - POST API banayi
 - Postman se data bhejna sikha
 
----
-
 ## Folder Structure
 
 Day-3/
