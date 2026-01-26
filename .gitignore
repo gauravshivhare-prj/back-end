@@ -1,10 +1,7 @@
-# env files (VERY IMPORTANT)
+# Ignore all env files anywhere
 .env
-Day-8/.env
-Day-9/.env
+**/.env
 
-
-# node modules (VERY IMPORTANT)
+# Ignore node_modules everywhere
 node_modules/
-Day-8/node_modules/
-Day-9/node_modules/
+**/node_modules/
