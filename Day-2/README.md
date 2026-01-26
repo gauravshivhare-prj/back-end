@@ -29,7 +29,7 @@ Ye `app` pura backend server ko represent karta hai.
 
 ### Step 3: Create GET Route (/)
 
-Root path ke liye route banaya.
+Root path ke liye route banaya
 
 app.get("/", (req, res) => {
   res.send("hello yaaroo");
