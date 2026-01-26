@@ -47,7 +47,7 @@ Controllers banaye:
 - deleteUserController
 
 Controllers ka kaam:
-Request lena → Logic run karna → Response dena
+Request lena → Logic run karna → Response dena.
 
 ### Step 4: Create Routes
 
@@ -67,7 +67,7 @@ app.use("/api/users", userRoutes);
 
 app.use(express.json());
 
-req.body se JSON data read karne ke liye.
+req.body se JSON data read karne ke liye
 
 ### Step 7: Start Server
 
