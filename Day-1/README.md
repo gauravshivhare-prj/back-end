@@ -54,7 +54,7 @@ Jo JavaScript ko browser ke bahar run karne deta hai.
 Backend se frontend ko data GET se aata hai)
 
 ### Nodemon (Tool)
-Nodemon ek tool hai jo server ko automatically restart karta hai
+Nodemon ek tool hai jo server ko automatically restart karta hai. 
 jab bhi code change hota hai.
 
 
