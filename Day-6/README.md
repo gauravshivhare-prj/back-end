@@ -48,7 +48,7 @@ Server working check ke liye.
 
 ### Step 7: Use User Routes
 app.use("/api/users", userRoutes);
-Matlab userRoutes ke sab endpoints ke aage `/api/users` lag jayega.
+Matlab userRoutes ke sab endpoints ke aage `/api/users` lag jayega
 
 ### Step 8: Create Routes
 Routes file me:
