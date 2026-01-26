@@ -95,4 +95,4 @@ name: String
 * `new mongoose.Schema()` ka matlab
   naya schema object create karna
 * Schema = structure
-* Model = MongoDB collection ka controller
+* Model = MongoDB collection ka controller.
