@@ -1,14 +1,12 @@
-const { default: mongoose } = require("mongoose");
+import mongoose from "mongoose";
 
-const connectDB = async () => {
-    try {
-        let res = await mongoose.connect("mongodb://0.0.0.0/e-com");
-        if( res ) {
-            console.log("MongoDB connected");
-        }
-    } catch (error) {
-        console.log("error while connecting db", error);
+export const connectDB = async () => {
+  try {
+    let res = await mongoose.connect("mongodb://0.0.0.0/d-mart");
+    if (res) {
+      console.log("Mongodb Connected");
     }
-}
-
-module.exports = connectDB;
+  } catch (error) {
+    console.log("error while connecting DB");
+  }
+};

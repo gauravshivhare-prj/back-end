@@ -1,15 +1,20 @@
-require('dotenv').config();
-const express = require('express');
-const connectDB = require('./config/db');
+import dotenv from "dotenv";
+import cookieParser from "cookie-parser";
+dotenv.config();
+import express from "express";
+import authRoutes from "./routes/auth.routes.js";
+import { connectDB } from "./config/db.js";
 
 const app = express();
 
+app.use(cookieParser());
+
 connectDB();
 
-const port = process.env.PORT || 3000;
+app.use("/api/auth", authRoutes);
 
-app.use('/api/auth', authRoute);
+const port = process.env.PORT || 4000;
 
-app.listen(port, () =>
-     console.log(`Server running on port ${port}`)
-);
+app.listen(port, () => {
+  console.log(`server is running on port ${port}`);
+});
