@@ -1,5 +1,5 @@
 import { ProductModel } from "../models/product.model.js";
-import { UserModel } from "../models/user.model";
+import { UserModel } from "../models/user.model.js";
 
 export const createProductController = async (req, res) => {
   try {
@@ -17,7 +17,6 @@ export const createProductController = async (req, res) => {
         amount,
         currency,
       },
-      images,
     });
 
     // let user = await UserModel.findById(req.user._id);
@@ -38,6 +37,7 @@ export const createProductController = async (req, res) => {
       product: newProduct,
     });
   } catch (error) {
+    console.log("error in create product", error);
     return res.status(500).json({
       success: false,
       message: "Internal server error",
@@ -116,7 +116,6 @@ export const updateProductController = async (req, res) => {
           amount,
           currency,
         },
-        images,
       },
       { new: true, runValidators: true }
     );
@@ -167,6 +166,7 @@ export const updateSingleProductValueController = async (req, res) => {
       product: updateSingleProductValue,
     });
   } catch (error) {
+    console.log("error in single update", error);
     return res.status(500).json({
       success: false,
       message: "Internal server error",
@@ -174,7 +174,7 @@ export const updateSingleProductValueController = async (req, res) => {
   }
 };
 
-export const logoutController = async (req, res) => {
+export const deleteProductController = async (req, res) => {
   try {
     let productId = req.params.productId;
 
@@ -185,17 +185,25 @@ export const logoutController = async (req, res) => {
 
     let deLPro = await ProductModel.findByIdAndDelete(productId);
 
-    let user = await UserModel.findById(req.user._id);
+    // let user = await UserModel.findById(req.user._id);
 
-    let updatedUserProducts = user.products.filter((elem) => {
-      elem !== deLPro._id;
-    });
+    // let updatedUserProducts = user.products.filter((elem) => {
+    //   elem !== deLPro._id;
+    // });
 
-    user.products = updatedUserProducts;
-    await user.save();
+    // user.products = updatedUserProducts;
+    // await user.save();
+
+    let updateUser = await UserModel.findByIdAndUpdate(
+      req.user._id,
+      {
+        $pull: { products: productId },
+      },
+      { new: true }
+    );
 
     return res.status(200).json({
-      message: "User log out",
+      message: "Product deleted",
       success: true,
     });
   } catch (error) {

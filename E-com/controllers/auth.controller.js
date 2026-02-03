@@ -33,6 +33,9 @@ export const registerController = async (req, res) => {
       user_id: newUser._id,
     });
 
+    newUser.cart = userCart._id;
+    await newUser.save();
+
     let token = jwt.sign({ id: newUser._id }, process.env.JWT_SECRET, {
       expiresIn: "1h",
     });
@@ -45,6 +48,7 @@ export const registerController = async (req, res) => {
       user: newUser,
     });
   } catch (error) {
+    console.log("error in reg", error);
     return res.status(500).json({
       success: false,
       message: "Internal server error",

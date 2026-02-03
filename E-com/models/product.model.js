@@ -1,5 +1,5 @@
 import mongoose from "mongoose";
-  
+
 const productSchema = new mongoose.Schema(
   {
     productName: {
@@ -11,7 +11,7 @@ const productSchema = new mongoose.Schema(
     },
     price: {
       amount: {
-        type: String,
+        type: Number,
         required: true,
       },
       currency: {
@@ -24,7 +24,6 @@ const productSchema = new mongoose.Schema(
       {
         type: String,
         maxlength: 5,
-        required: true,
       },
     ],
     user_id: {
